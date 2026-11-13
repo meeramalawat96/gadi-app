@@ -84,7 +84,7 @@ h1{font-size:clamp(42px,11vw,58px);letter-spacing:-2px}.lead{font-size:17px}
 <div class="art" aria-label="Bike, auto and car ride options"><div class="orbit"></div><div class="bike">🏍️</div><div class="vehicle-art">🛺</div><div class="car">🚕</div><div class="art-label" data-i18n="tagline">SAFE • FAST • AFFORDABLE</div></div>
 </section>
 <section class="booking" id="booking"><div class="booking-card">
-<h2 data-i18n="bookingTitle">Book Your Ride</h2><p class="sub" data-i18n="bookingIntro">Enter your trip details below. Our team will contact you on WhatsApp to confirm driver availability and fare.</p>
+<h2 data-i18n="bookingTitle">Book Your Ride</h2><p class="sub" data-i18n="bookingIntro">Enter your trip details below to submit a booking request.</p>
 <form id="bookingForm"><div class="grid">
 <div class="field"><label for="name" data-i18n="nameLabel">Your Name *</label><input id="name" required placeholder="Enter your name" data-placeholder="namePlaceholder"></div>
 <div class="field"><label for="phone" data-i18n="phoneLabel">Mobile Number *</label><input id="phone" type="tel" required placeholder="Enter mobile number" data-placeholder="phonePlaceholder"></div>
@@ -95,35 +95,35 @@ h1{font-size:clamp(42px,11vw,58px);letter-spacing:-2px}.lead{font-size:17px}
 <div class="field"><label for="vehicle" data-i18n="vehicleLabel">Select Vehicle *</label><select id="vehicle" required><option value="" data-i18n="chooseVehicle">Choose vehicle</option><option value="Bike" data-i18n="bike">Bike</option><option value="Car" data-i18n="car">Car</option><option value="3-Wheeler" data-i18n="threeWheeler">3-Wheeler</option><option value="Loading Pickup" data-i18n="loadingPickup">Loading Pickup</option></select></div>
 <div class="field"><label for="people" data-i18n="peopleLabel">Passengers / Load Details</label><input id="people" placeholder="e.g. 2 passengers" data-placeholder="peoplePlaceholder"></div>
 <div class="field full"><label for="details" data-i18n="detailsLabel">Additional Details</label><textarea id="details" placeholder="Any extra information (optional)" data-placeholder="detailsPlaceholder"></textarea></div>
-</div><button class="submit" type="submit" data-i18n="submitButton">Send Booking Request on WhatsApp</button>
-<p class="note" data-i18n="bookingNote">This is a booking enquiry only. Your ride will be confirmed after our team checks driver availability and fare with you.</p></form>
+</div><button class="submit" type="submit" data-i18n="submitButton">Create Booking</button>
+<p class="note" data-i18n="bookingNote">Booking submit hone ke baad Admin Dashboard mein jayegi. Driver aur fare confirm hone ke baad ride confirm hogi.</p></form>
 </div></section></main>
 <footer data-i18n="footer">© 2026 GADI APP. Safe • Fast • Affordable rides.</footer>
-<a class="float-wa" href="https://wa.me/917734807127?text=Hello%20GADI%20APP%2C%20I%20want%20to%20enquire%20about%20a%20ride." target="_blank" rel="noopener">WhatsApp</a>
+
 <script>
-const WHATSAPP_NUMBER="917734807127";
+
 const translations = {
  en:{
   bookRide:"Book a Ride",bookRideArrow:"Book a Ride →",tagline:"SAFE • FAST • AFFORDABLE",
   heroLine1:"Your City,",heroLine2:"Your Ride.",heroText:"Quick, affordable rides at your doorstep. Enter your pickup and drop locations, choose your vehicle, and send your booking request on WhatsApp.",
-  bookingTitle:"Book Your Ride",bookingIntro:"Enter your trip details below. Our team will contact you on WhatsApp to confirm driver availability and fare.",
-  nameLabel:"Your Name *",phoneLabel:"Mobile Number *",pickupLabel:"📍 Pickup Location *",dropLabel:"📍 Drop Location *",dateLabel:"Travel Date *",timeLabel:"Pickup Time",vehicleLabel:"Select Vehicle *",chooseVehicle:"Choose vehicle",bike:"Bike",car:"Car",threeWheeler:"3-Wheeler",loadingPickup:"Loading Pickup",peopleLabel:"Passengers / Load Details",detailsLabel:"Additional Details",submitButton:"Send Booking Request on WhatsApp",bookingNote:"This is a booking enquiry only. Your ride will be confirmed after our team checks driver availability and fare with you.",footer:"© 2026 GADI APP. Safe • Fast • Affordable rides.",
+  bookingTitle:"Book Your Ride",bookingIntro:"Enter your trip details below to submit a booking request.",
+  nameLabel:"Your Name *",phoneLabel:"Mobile Number *",pickupLabel:"📍 Pickup Location *",dropLabel:"📍 Drop Location *",dateLabel:"Travel Date *",timeLabel:"Pickup Time",vehicleLabel:"Select Vehicle *",chooseVehicle:"Choose vehicle",bike:"Bike",car:"Car",threeWheeler:"3-Wheeler",loadingPickup:"Loading Pickup",peopleLabel:"Passengers / Load Details",detailsLabel:"Additional Details",submitButton:"Create Booking",bookingNote:"Booking submit hone ke baad Admin Dashboard mein jayegi. Driver aur fare confirm hone ke baad ride confirm hogi.",footer:"© 2026 GADI APP. Safe • Fast • Affordable rides.",
   namePlaceholder:"Enter your name",phonePlaceholder:"Enter mobile number",pickupPlaceholder:"Enter pickup location manually",dropPlaceholder:"Enter drop location manually",peoplePlaceholder:"e.g. 2 passengers",detailsPlaceholder:"Any extra information (optional)",
   waIntro:"Hello GADI APP! I want to book a ride.",waName:"Name",waPhone:"Mobile",waPickup:"Pickup Location",waDrop:"Drop Location",waDate:"Travel Date",waTime:"Pickup Time",waVehicle:"Vehicle",waPeople:"Passengers / Load Details",waDetails:"Additional Details",waEnd:"Please confirm driver availability and fare.",notSpecified:"Not specified",none:"None"
  },
  hi:{
   bookRide:"सवारी बुक करें",bookRideArrow:"सवारी बुक करें →",tagline:"सुरक्षित • तेज़ • किफायती",
-  heroLine1:"आपका शहर,",heroLine2:"आपकी सवारी।",heroText:"आपके दरवाज़े पर आसान और किफायती सवारी। पिकअप और ड्रॉप लोकेशन लिखें, गाड़ी चुनें और WhatsApp पर बुकिंग अनुरोध भेजें।",
-  bookingTitle:"अपनी सवारी बुक करें",bookingIntro:"नीचे अपनी यात्रा की जानकारी भरें। ड्राइवर की उपलब्धता और किराया बताने के लिए हमारी टीम WhatsApp पर संपर्क करेगी।",
-  nameLabel:"आपका नाम *",phoneLabel:"मोबाइल नंबर *",pickupLabel:"📍 पिकअप लोकेशन *",dropLabel:"📍 ड्रॉप लोकेशन *",dateLabel:"यात्रा की तारीख *",timeLabel:"पिकअप का समय",vehicleLabel:"गाड़ी चुनें *",chooseVehicle:"गाड़ी चुनें",bike:"बाइक",car:"कार",threeWheeler:"3-व्हीलर",loadingPickup:"लोडिंग पिकअप",peopleLabel:"सवारी / सामान की जानकारी",detailsLabel:"अन्य जानकारी",submitButton:"WhatsApp पर बुकिंग अनुरोध भेजें",bookingNote:"यह केवल बुकिंग पूछताछ है। ड्राइवर की उपलब्धता और किराया जाँचने के बाद हमारी टीम आपकी सवारी कन्फर्म करेगी।",footer:"© 2026 GADI APP. सुरक्षित • तेज़ • किफायती सवारी।",
+  heroLine1:"आपका शहर,",heroLine2:"आपकी सवारी।",heroText:"आपके दरवाज़े पर आसान और किफायती सवारी। पिकअप और ड्रॉप लोकेशन लिखें, गाड़ी चुनें और बुकिंग बनाएँ।",
+  bookingTitle:"अपनी सवारी बुक करें",bookingIntro:"नीचे अपनी यात्रा की जानकारी भरें और बुकिंग सबमिट करें।",
+  nameLabel:"आपका नाम *",phoneLabel:"मोबाइल नंबर *",pickupLabel:"📍 पिकअप लोकेशन *",dropLabel:"📍 ड्रॉप लोकेशन *",dateLabel:"यात्रा की तारीख *",timeLabel:"पिकअप का समय",vehicleLabel:"गाड़ी चुनें *",chooseVehicle:"गाड़ी चुनें",bike:"बाइक",car:"कार",threeWheeler:"3-व्हीलर",loadingPickup:"लोडिंग पिकअप",peopleLabel:"सवारी / सामान की जानकारी",detailsLabel:"अन्य जानकारी",submitButton:"बुकिंग बनाएँ",bookingNote:"बुकिंग सबमिट होने के बाद Admin Dashboard में दिखाई देगी। ड्राइवर और किराया तय होने के बाद सवारी कन्फर्म होगी।",footer:"© 2026 GADI APP. सुरक्षित • तेज़ • किफायती सवारी।",
   namePlaceholder:"अपना नाम लिखें",phonePlaceholder:"मोबाइल नंबर लिखें",pickupPlaceholder:"पिकअप लोकेशन यहाँ लिखें",dropPlaceholder:"ड्रॉप लोकेशन यहाँ लिखें",peoplePlaceholder:"जैसे 2 यात्री",detailsPlaceholder:"कोई अन्य जानकारी (वैकल्पिक)",
   waIntro:"नमस्ते GADI APP! मुझे सवारी बुक करनी है।",waName:"नाम",waPhone:"मोबाइल",waPickup:"पिकअप लोकेशन",waDrop:"ड्रॉप लोकेशन",waDate:"यात्रा की तारीख",waTime:"पिकअप का समय",waVehicle:"गाड़ी",waPeople:"यात्री / सामान की जानकारी",waDetails:"अन्य जानकारी",waEnd:"कृपया ड्राइवर की उपलब्धता और किराया बताएं।",notSpecified:"नहीं बताया",none:"कोई नहीं"
  },
  hinglish:{
   bookRide:"Ride Book Karein",bookRideArrow:"Ride Book Karein →",tagline:"SAFE • FAST • AFFORDABLE",
   heroLine1:"Aapka Shehar,",heroLine2:"Aapki Ride.",heroText:"Aapke ghar tak easy aur affordable ride. Pickup aur drop location khud type karein, vehicle choose karein aur WhatsApp par booking request bhejein.",
-  bookingTitle:"Apni Ride Book Karein",bookingIntro:"Neeche trip details bharein. Driver availability aur fare confirm karne ke liye hamari team WhatsApp par contact karegi.",
-  nameLabel:"Aapka Naam *",phoneLabel:"Mobile Number *",pickupLabel:"📍 Pickup Location *",dropLabel:"📍 Drop Location *",dateLabel:"Travel Date *",timeLabel:"Pickup Time",vehicleLabel:"Vehicle Choose Karein *",chooseVehicle:"Vehicle choose karein",bike:"Bike",car:"Car",threeWheeler:"3-Wheeler",loadingPickup:"Loading Pickup",peopleLabel:"Passengers / Load Details",detailsLabel:"Extra Details",submitButton:"WhatsApp Par Booking Request Bhejein",bookingNote:"Ye sirf booking enquiry hai. Driver availability aur fare check karne ke baad hamari team ride confirm karegi.",footer:"© 2026 GADI APP. Safe • Fast • Affordable rides.",
+  bookingTitle:"Apni Ride Book Karein",bookingIntro:"Neeche trip details bharein aur booking submit karein.",
+  nameLabel:"Aapka Naam *",phoneLabel:"Mobile Number *",pickupLabel:"📍 Pickup Location *",dropLabel:"📍 Drop Location *",dateLabel:"Travel Date *",timeLabel:"Pickup Time",vehicleLabel:"Vehicle Choose Karein *",chooseVehicle:"Vehicle choose karein",bike:"Bike",car:"Car",threeWheeler:"3-Wheeler",loadingPickup:"Loading Pickup",peopleLabel:"Passengers / Load Details",detailsLabel:"Extra Details",submitButton:"Booking Create Karein",bookingNote:"Booking submit hone ke baad Admin Dashboard mein dikhegi. Driver aur fare confirm hone ke baad ride confirm hogi.",footer:"© 2026 GADI APP. Safe • Fast • Affordable rides.",
   namePlaceholder:"Apna naam likhein",phonePlaceholder:"Mobile number likhein",pickupPlaceholder:"Pickup location yahan type karein",dropPlaceholder:"Drop location yahan type karein",peoplePlaceholder:"Jaise 2 passengers",detailsPlaceholder:"Koi extra information (optional)",
   waIntro:"Hello GADI APP! Mujhe ride book karni hai.",waName:"Naam",waPhone:"Mobile",waPickup:"Pickup Location",waDrop:"Drop Location",waDate:"Travel Date",waTime:"Pickup Time",waVehicle:"Vehicle",waPeople:"Passengers / Load Details",waDetails:"Extra Details",waEnd:"Please driver availability aur fare confirm karein.",notSpecified:"Nahi bataya",none:"Kuch nahi"
  }
@@ -140,16 +140,45 @@ languageSelect.value=localStorage.getItem("gadiLanguage")||"en";
 setLanguage(languageSelect.value);
 languageSelect.addEventListener("change",()=>setLanguage(languageSelect.value));
 
-document.getElementById("bookingForm").addEventListener("submit",function(e){
+document.getElementById("bookingForm").addEventListener("submit",async function(e){
  e.preventDefault();
- const val=id=>document.getElementById(id).value.trim();
- const t=translations[languageSelect.value]||translations.en;
- const vehicleSelect=document.getElementById("vehicle");
- const vehicle=vehicleSelect.options[vehicleSelect.selectedIndex].value;
- const msg=[t.waIntro,"",t.waName+": "+val("name"),t.waPhone+": "+val("phone"),t.waPickup+": "+val("pickup"),t.waDrop+": "+val("drop"),t.waDate+": "+val("date"),t.waTime+": "+(val("time")||t.notSpecified),t.waVehicle+": "+vehicle,t.waPeople+": "+(val("people")||t.notSpecified),t.waDetails+": "+(val("details")||t.none),"",t.waEnd].join("
-");
- const url="https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(msg);
- const win=window.open(url,"_blank");if(!win)window.location.href=url;
+ const button=this.querySelector('button[type="submit"]');
+ const original=button.textContent;
+ button.disabled=true; button.textContent="Booking save ho rahi hai...";
+ try {
+  const bookingPayload={
+   pickup_location:document.getElementById("pickup").value.trim(),
+   drop_location:document.getElementById("drop").value.trim(),
+   journey_date:document.getElementById("date").value || null,
+   pickup_time:document.getElementById("time").value || null,
+   vehicle_type:document.getElementById("vehicle").value,
+   trip_type:"One Way",
+   passenger_count:null,
+   luggage:document.getElementById("people").value.trim() || null,
+   notes:document.getElementById("details").value.trim() || null,
+   status:"open"
+  };
+  const {data:booking,error:bookingError}=await window.gadiSupabase
+   .from("bookings").insert(bookingPayload).select("id").single();
+  if(bookingError) throw bookingError;
+  const customerPayload={
+   booking_id:booking.id,
+   customer_name:document.getElementById("name").value.trim(),
+   customer_phone:document.getElementById("phone").value.trim(),
+   customer_email:null,
+   customer_address:null
+  };
+  const {error:customerError}=await window.gadiSupabase
+   .from("customer_details").insert(customerPayload);
+  if(customerError) throw customerError;
+  alert("Booking successfully submit ho gayi! Admin Dashboard mein booking check karein.");
+  this.reset();
+ } catch(err) {
+  console.error("Booking submit error:",err);
+  alert("Booking save nahi hui. Error: "+(err.message || "Please try again."));
+ } finally {
+  button.disabled=false; button.textContent=original;
+ }
 });
 
 if ("serviceWorker" in navigator) {
@@ -251,13 +280,13 @@ if ("serviceWorker" in navigator) {
 </div>
 
 
-<!-- Supabase is used only by staff login/dashboard; public customer booking remains WhatsApp-only. -->
+<!-- Supabase handles public booking submission and staff login/dashboard. -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 (function(){
  const SUPABASE_URL="https://ypduvoihukgyztvrceko.supabase.co";
  const SUPABASE_PUBLISHABLE_KEY="sb_publishable_xmN1tviHmeTTeeNamOQjMA_pTXJNExt";
- const client=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
+ const client=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);\n window.gadiSupabase=client;
  const el=id=>document.getElementById(id);
  let user=null, driverProfile=null;
  const safe=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
