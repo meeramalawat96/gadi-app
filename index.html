@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#1762f5">
-<meta name="description" content="GADI APP - Safe, fast and affordable rides.">
-<title>GADI APP</title>
-
 <link rel="manifest" href="./manifest.json">
 <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
 <link rel="apple-touch-icon" href="./icon-192.png">
-
+<title>GADI APP</title>
 <style>
 :root{--blue:#1762f5;--navy:#202633;--yellow:#ffc629;--green:#12a36b}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--navy);background:#f5f8ff}
 header{height:76px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,5vw,76px);position:sticky;top:0;z-index:10;box-shadow:0 2px 12px #14285010}
-.logo{font-size:27px;font-weight:900;letter-spacing:-1px;color:#17233b;text-decoration:none}
-.logo span{color:var(--blue)}
+.logo{font-size:27px;font-weight:900;letter-spacing:-1px;color:#17233b;text-decoration:none}.logo span{color:var(--blue)}
 .header-actions{display:flex;align-items:center;gap:12px}
 #languageSelect{width:auto;min-width:125px;padding:13px 12px;border-radius:12px;border:1px solid #d6dfed;background:#fff;font-weight:700;font-size:14px;color:#26344a}
 .header-btn{display:inline-block;background:var(--yellow);color:#17233b;padding:15px 22px;border-radius:13px;text-decoration:none;font-weight:800;font-size:16px}
@@ -26,262 +20,353 @@ header{height:76px;background:#fff;display:flex;align-items:center;justify-conte
 .art{height:330px;position:relative;display:flex;align-items:center;justify-content:center}
 .orbit{position:absolute;width:300px;height:300px;border-radius:50%;background:#e1eaff;right:13%;top:5px}
 .vehicle-art{position:relative;z-index:1;width:138px;height:180px;border-radius:38px;background:#13a66e;border:7px solid #086144;display:flex;align-items:center;justify-content:center;font-size:92px;box-shadow:0 18px 35px #143c5a1f}
-.bike{position:absolute;left:9%;top:145px;font-size:65px;transform:rotate(-8deg)}
-.car{position:absolute;right:8%;top:145px;font-size:65px}
+.bike{position:absolute;left:9%;top:145px;font-size:65px;transform:rotate(-8deg)}.car{position:absolute;right:8%;top:145px;font-size:65px}
 .art-label{position:absolute;z-index:2;bottom:22px;background:#fff;padding:15px 25px;border-radius:40px;font-weight:900;color:#263b5e;box-shadow:0 8px 24px #1e325a14}
 .tag{display:inline-block;background:#e8efff;color:var(--blue);padding:11px 17px;border-radius:30px;font-size:14px;font-weight:900;letter-spacing:.4px;margin-bottom:22px}
-h1{font-size:clamp(42px,6vw,70px);line-height:.99;letter-spacing:-2.5px;margin:0 0 22px;font-weight:950}
-h1 span{color:var(--blue)}
+h1{font-size:clamp(42px,6vw,70px);line-height:.99;letter-spacing:-2.5px;margin:0 0 22px;font-weight:950}h1 span{color:var(--blue)}
 .lead{font-size:19px;line-height:1.55;color:#53627a;margin:0 0 28px}
 .booking{max-width:980px;margin:0 auto 70px;padding:0 20px;scroll-margin-top:95px}
 .booking-card{background:#fff;border:1px solid #dce5f5;border-radius:24px;padding:clamp(22px,4vw,42px);box-shadow:0 14px 40px #20375f12}
-.booking h2{font-size:32px;margin:0 0 9px}
-.sub{color:#71809a;margin:0 0 28px;line-height:1.5}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
-.field{display:flex;flex-direction:column;gap:8px}
-.field.full{grid-column:1/-1}
+.booking h2{font-size:32px;margin:0 0 9px}.sub{color:#71809a;margin:0 0 28px;line-height:1.5}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.field{display:flex;flex-direction:column;gap:8px}.field.full{grid-column:1/-1}
 label{font-size:14px;font-weight:800;color:#34445e}
 input,select,textarea{width:100%;padding:16px;border:1px solid #d6dfed;border-radius:13px;background:#fff;font:16px Arial;color:#26344a;outline:none}
 input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #1762f51a}
-textarea{min-height:95px;resize:vertical}
-.submit{margin-top:22px;width:100%;border:0;border-radius:14px;padding:18px;background:var(--green);color:#fff;font-size:18px;font-weight:900;cursor:pointer}
-.note{font-size:13px;color:#77849a;line-height:1.5;margin:14px 0 0}
-footer{text-align:center;padding:25px;color:#71809a;font-size:14px}
+textarea{min-height:95px;resize:vertical}.submit{margin-top:22px;width:100%;border:0;border-radius:14px;padding:18px;background:var(--green);color:#fff;font-size:18px;font-weight:900;cursor:pointer}
+.note{font-size:13px;color:#77849a;line-height:1.5;margin:14px 0 0}footer{text-align:center;padding:25px;color:#71809a;font-size:14px}
 .float-wa{position:fixed;right:20px;bottom:20px;background:#12a65a;color:#fff;text-decoration:none;font-weight:900;padding:17px 22px;border-radius:40px;box-shadow:0 8px 24px #0003;z-index:12}
-
-@media(max-width:760px){
-header{height:68px;padding:0 12px}
-.logo{font-size:21px}
-.header-actions{gap:7px}
-#languageSelect{min-width:94px;padding:11px 6px;font-size:12px}
-.header-btn{padding:12px 12px;font-size:13px}
+@media(max-width:760px){header{height:68px;padding:0 12px}.logo{font-size:21px}.header-actions{gap:7px}#languageSelect{min-width:94px;padding:11px 6px;font-size:12px}.header-btn{padding:12px 12px;font-size:13px}
 .hero{display:flex;flex-direction:column-reverse;align-items:stretch;gap:0;padding:24px 20px 35px;min-height:unset}
-.art{height:300px}
-.orbit{width:270px;height:270px;right:50%;transform:translateX(50%);top:0}
-.vehicle-art{width:138px;height:180px}
-.bike{left:4%;top:130px;font-size:58px}
-.car{right:4%;top:130px;font-size:58px}
-.art-label{bottom:7px;font-size:13px}
-.tag{margin:18px 0 20px;font-size:12px}
-h1{font-size:clamp(42px,11vw,58px);letter-spacing:-2px}
-.lead{font-size:17px}
-.booking{padding:0 14px;margin-bottom:55px}
-.booking-card{padding:22px 17px;border-radius:19px}
-.booking h2{font-size:27px}
-.grid{grid-template-columns:1fr}
-.field.full{grid-column:auto}
-.float-wa{right:14px;bottom:14px;padding:14px 18px}
-}
-</style>
-</head>
+.art{height:300px}.orbit{width:270px;height:270px;right:50%;transform:translateX(50%);top:0}
+.vehicle-art{width:138px;height:180px}.bike{left:4%;top:130px;font-size:58px}.car{right:4%;top:130px;font-size:58px}
+.art-label{bottom:7px;font-size:13px}.tag{margin:18px 0 20px;font-size:12px}
+h1{font-size:clamp(42px,11vw,58px);letter-spacing:-2px}.lead{font-size:17px}
+.booking{padding:0 14px;margin-bottom:55px}.booking-card{padding:22px 17px;border-radius:19px}
+.booking h2{font-size:27px}.grid{grid-template-columns:1fr}.field.full{grid-column:auto}
+.float-wa{right:14px;bottom:14px;padding:14px 18px}}
 
+.staff-login-btn{border:0;background:#1762f5;color:#fff;padding:15px 18px;border-radius:13px;font-weight:800;font-size:14px;cursor:pointer}
+.staff-overlay{position:fixed;inset:0;background:#101b2dcc;z-index:50;display:none;align-items:flex-start;justify-content:center;overflow:auto;padding:28px 12px}
+.staff-overlay.open{display:flex}.staff-box{width:min(100%,1050px);background:#f5f8ff;border-radius:20px;padding:22px;position:relative;box-shadow:0 20px 60px #0005}
+.staff-close{float:right;background:#e7edf8;color:#24344e;border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}
+.staff-card{background:#fff;border:1px solid #dce5f5;border-radius:15px;padding:18px;margin:14px 0}
+.staff-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.staff-card input,.staff-card select,.staff-card textarea{padding:12px;border:1px solid #d6dfed;border-radius:10px;width:100%;font:15px Arial}
+.staff-card label{display:block;font-size:13px;font-weight:800;margin:0 0 6px}
+.staff-card .field{margin-bottom:10px}
+.staff-action{background:#1762f5;color:white;border:0;padding:11px 15px;border-radius:9px;font-weight:800;cursor:pointer;margin:4px}
+.staff-muted{color:#71809a;font-size:13px}.staff-item{background:#fff;border:1px solid #dce5f5;border-radius:12px;padding:14px;margin:10px 0}
+.staff-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.staff-tabs button{border:0;background:#e5ecf7;color:#233954;padding:10px 14px;border-radius:9px;font-weight:800}
+.staff-tabs button.active{background:#202f48;color:white}.staff-hidden{display:none!important}
+.staff-note{padding:10px;border-radius:9px;background:#eaf3ff;color:#245078;font-size:13px;margin:10px 0}
+.staff-error{background:#fff0ee;color:#a93226}.staff-good{background:#eaf8f1;color:#176b49}
+.staff-quote{background:#f4f8ff;padding:10px;border-left:3px solid #1762f5;margin:8px 0;border-radius:6px}
+@media(max-width:760px){.staff-login-btn{padding:11px 10px;font-size:12px}.staff-box{padding:13px}.staff-card{padding:13px}}
+
+</style></head>
 <body>
 <header>
 <a class="logo" href="#">🛺 GADI <span>APP</span></a>
 <div class="header-actions">
 <select id="languageSelect" aria-label="Choose language">
-<option value="en">English</option>
-<option value="hi">हिन्दी</option>
-<option value="hinglish">Hinglish</option>
+<option value="en">English</option><option value="hi">हिन्दी</option><option value="hinglish">Hinglish</option>
 </select>
 <a class="header-btn" href="#booking" data-i18n="bookRide">Book a Ride</a>
+<button type="button" class="staff-login-btn" id="openStaffLogin">🔐 Driver / Admin Login</button>
 </div>
 </header>
-
 <main>
 <section class="hero">
-<div class="hero-copy">
-<div class="tag" data-i18n="tagline">SAFE • FAST • AFFORDABLE</div>
+<div class="hero-copy"><div class="tag" data-i18n="tagline">SAFE • FAST • AFFORDABLE</div>
 <h1><span data-i18n="heroLine1">Your City,</span><br><span data-i18n="heroLine2">Your Ride.</span></h1>
 <p class="lead" data-i18n="heroText">Quick, affordable rides at your doorstep. Enter your pickup and drop locations, choose your vehicle, and send your booking request on WhatsApp.</p>
-<a class="header-btn" href="#booking" data-i18n="bookRideArrow">Book a Ride →</a>
-</div>
-<div class="art" aria-label="Bike, auto and car ride options">
-<div class="orbit"></div>
-<div class="bike">🏍️</div>
-<div class="vehicle-art">🛺</div>
-<div class="car">🚕</div>
-<div class="art-label" data-i18n="tagline">SAFE • FAST • AFFORDABLE</div>
-</div>
+<a class="header-btn" href="#booking" data-i18n="bookRideArrow">Book a Ride →</a></div>
+<div class="art" aria-label="Bike, auto and car ride options"><div class="orbit"></div><div class="bike">🏍️</div><div class="vehicle-art">🛺</div><div class="car">🚕</div><div class="art-label" data-i18n="tagline">SAFE • FAST • AFFORDABLE</div></div>
 </section>
-
-<section class="booking" id="booking">
-<div class="booking-card">
-<h2 data-i18n="bookingTitle">Book Your Ride</h2>
-<p class="sub" data-i18n="bookingIntro">Enter your trip details below. Our team will contact you on WhatsApp to confirm driver availability and fare.</p>
-
-<form id="bookingForm">
-<div class="grid">
-<div class="field">
-<label for="name" data-i18n="nameLabel">Your Name *</label>
-<input id="name" required placeholder="Enter your name" data-placeholder="namePlaceholder">
-</div>
-<div class="field">
-<label for="phone" data-i18n="phoneLabel">Mobile Number *</label>
-<input id="phone" type="tel" required placeholder="Enter mobile number" data-placeholder="phonePlaceholder">
-</div>
-<div class="field full">
-<label for="pickup" data-i18n="pickupLabel">📍 Pickup Location *</label>
-<input id="pickup" required placeholder="Enter pickup location manually" data-placeholder="pickupPlaceholder">
-</div>
-<div class="field full">
-<label for="drop" data-i18n="dropLabel">📍 Drop Location *</label>
-<input id="drop" required placeholder="Enter drop location manually" data-placeholder="dropPlaceholder">
-</div>
-<div class="field">
-<label for="date" data-i18n="dateLabel">Travel Date *</label>
-<input id="date" type="date" required>
-</div>
-<div class="field">
-<label for="time" data-i18n="timeLabel">Pickup Time</label>
-<input id="time" type="time">
-</div>
-<div class="field">
-<label for="vehicle" data-i18n="vehicleLabel">Select Vehicle *</label>
-<select id="vehicle" required>
-<option value="" data-i18n="chooseVehicle">Choose vehicle</option>
-<option value="Bike" data-i18n="bike">Bike</option>
-<option value="Car" data-i18n="car">Car</option>
-<option value="3-Wheeler" data-i18n="threeWheeler">3-Wheeler</option>
-<option value="Loading Pickup" data-i18n="loadingPickup">Loading Pickup</option>
-</select>
-</div>
-<div class="field">
-<label for="people" data-i18n="peopleLabel">Passengers / Load Details</label>
-<input id="people" placeholder="e.g. 2 passengers" data-placeholder="peoplePlaceholder">
-</div>
-<div class="field full">
-<label for="details" data-i18n="detailsLabel">Additional Details</label>
-<textarea id="details" placeholder="Any extra information (optional)" data-placeholder="detailsPlaceholder"></textarea>
-</div>
-</div>
-<button class="submit" type="submit" data-i18n="submitButton">Send Booking Request on WhatsApp</button>
-<p class="note" data-i18n="bookingNote">This is a booking enquiry only. Your ride will be confirmed after our team checks driver availability and fare with you.</p>
-</form>
-</div>
-</section>
-</main>
-
+<section class="booking" id="booking"><div class="booking-card">
+<h2 data-i18n="bookingTitle">Book Your Ride</h2><p class="sub" data-i18n="bookingIntro">Enter your trip details below. Our team will contact you on WhatsApp to confirm driver availability and fare.</p>
+<form id="bookingForm"><div class="grid">
+<div class="field"><label for="name" data-i18n="nameLabel">Your Name *</label><input id="name" required placeholder="Enter your name" data-placeholder="namePlaceholder"></div>
+<div class="field"><label for="phone" data-i18n="phoneLabel">Mobile Number *</label><input id="phone" type="tel" required placeholder="Enter mobile number" data-placeholder="phonePlaceholder"></div>
+<div class="field full"><label for="pickup" data-i18n="pickupLabel">📍 Pickup Location *</label><input id="pickup" required placeholder="Enter pickup location manually" data-placeholder="pickupPlaceholder"></div>
+<div class="field full"><label for="drop" data-i18n="dropLabel">📍 Drop Location *</label><input id="drop" required placeholder="Enter drop location manually" data-placeholder="dropPlaceholder"></div>
+<div class="field"><label for="date" data-i18n="dateLabel">Travel Date *</label><input id="date" type="date" required></div>
+<div class="field"><label for="time" data-i18n="timeLabel">Pickup Time</label><input id="time" type="time"></div>
+<div class="field"><label for="vehicle" data-i18n="vehicleLabel">Select Vehicle *</label><select id="vehicle" required><option value="" data-i18n="chooseVehicle">Choose vehicle</option><option value="Bike" data-i18n="bike">Bike</option><option value="Car" data-i18n="car">Car</option><option value="3-Wheeler" data-i18n="threeWheeler">3-Wheeler</option><option value="Loading Pickup" data-i18n="loadingPickup">Loading Pickup</option></select></div>
+<div class="field"><label for="people" data-i18n="peopleLabel">Passengers / Load Details</label><input id="people" placeholder="e.g. 2 passengers" data-placeholder="peoplePlaceholder"></div>
+<div class="field full"><label for="details" data-i18n="detailsLabel">Additional Details</label><textarea id="details" placeholder="Any extra information (optional)" data-placeholder="detailsPlaceholder"></textarea></div>
+</div><button class="submit" type="submit" data-i18n="submitButton">Send Booking Request on WhatsApp</button>
+<p class="note" data-i18n="bookingNote">This is a booking enquiry only. Your ride will be confirmed after our team checks driver availability and fare with you.</p></form>
+</div></section></main>
 <footer data-i18n="footer">© 2026 GADI APP. Safe • Fast • Affordable rides.</footer>
 <a class="float-wa" href="https://wa.me/917734807127?text=Hello%20GADI%20APP%2C%20I%20want%20to%20enquire%20about%20a%20ride." target="_blank" rel="noopener">WhatsApp</a>
-
 <script>
 const WHATSAPP_NUMBER="917734807127";
-
-const translations={
-en:{
-bookRide:"Book a Ride",bookRideArrow:"Book a Ride →",tagline:"SAFE • FAST • AFFORDABLE",
-heroLine1:"Your City,",heroLine2:"Your Ride.",
-heroText:"Quick, affordable rides at your doorstep. Enter your pickup and drop locations, choose your vehicle, and send your booking request on WhatsApp.",
-bookingTitle:"Book Your Ride",bookingIntro:"Enter your trip details below. Our team will contact you on WhatsApp to confirm driver availability and fare.",
-nameLabel:"Your Name *",phoneLabel:"Mobile Number *",pickupLabel:"📍 Pickup Location *",dropLabel:"📍 Drop Location *",
-dateLabel:"Travel Date *",timeLabel:"Pickup Time",vehicleLabel:"Select Vehicle *",chooseVehicle:"Choose vehicle",
-bike:"Bike",car:"Car",threeWheeler:"3-Wheeler",loadingPickup:"Loading Pickup",
-peopleLabel:"Passengers / Load Details",detailsLabel:"Additional Details",
-submitButton:"Send Booking Request on WhatsApp",
-bookingNote:"This is a booking enquiry only. Your ride will be confirmed after our team checks driver availability and fare with you.",
-footer:"© 2026 GADI APP. Safe • Fast • Affordable rides.",
-namePlaceholder:"Enter your name",phonePlaceholder:"Enter mobile number",
-pickupPlaceholder:"Enter pickup location manually",dropPlaceholder:"Enter drop location manually",
-peoplePlaceholder:"e.g. 2 passengers",detailsPlaceholder:"Any extra information (optional)",
-waIntro:"Hello GADI APP! I want to book a ride.",waName:"Name",waPhone:"Mobile",
-waPickup:"Pickup Location",waDrop:"Drop Location",waDate:"Travel Date",waTime:"Pickup Time",
-waVehicle:"Vehicle",waPeople:"Passengers / Load Details",waDetails:"Additional Details",
-waEnd:"Please confirm driver availability and fare.",notSpecified:"Not specified",none:"None"
-},
-hi:{
-bookRide:"सवारी बुक करें",bookRideArrow:"सवारी बुक करें →",tagline:"सुरक्षित • तेज़ • किफायती",
-heroLine1:"आपका शहर,",heroLine2:"आपकी सवारी।",
-heroText:"आपके दरवाज़े पर आसान और किफायती सवारी। पिकअप और ड्रॉप लोकेशन लिखें, गाड़ी चुनें और WhatsApp पर बुकिंग अनुरोध भेजें।",
-bookingTitle:"अपनी सवारी बुक करें",
-bookingIntro:"नीचे अपनी यात्रा की जानकारी भरें। ड्राइवर की उपलब्धता और किराया बताने के लिए हमारी टीम WhatsApp पर संपर्क करेगी।",
-nameLabel:"आपका नाम *",phoneLabel:"मोबाइल नंबर *",pickupLabel:"📍 पिकअप लोकेशन *",dropLabel:"📍 ड्रॉप लोकेशन *",
-dateLabel:"यात्रा की तारीख *",timeLabel:"पिकअप का समय",vehicleLabel:"गाड़ी चुनें *",chooseVehicle:"गाड़ी चुनें",
-bike:"बाइक",car:"कार",threeWheeler:"3-व्हीलर",loadingPickup:"लोडिंग पिकअप",
-peopleLabel:"सवारी / सामान की जानकारी",detailsLabel:"अन्य जानकारी",
-submitButton:"WhatsApp पर बुकिंग अनुरोध भेजें",
-bookingNote:"यह केवल बुकिंग पूछताछ है। ड्राइवर की उपलब्धता और किराया जाँचने के बाद हमारी टीम आपकी सवारी कन्फर्म करेगी।",
-footer:"© 2026 GADI APP. सुरक्षित • तेज़ • किफायती सवारी।",
-namePlaceholder:"अपना नाम लिखें",phonePlaceholder:"मोबाइल नंबर लिखें",
-pickupPlaceholder:"पिकअप लोकेशन यहाँ लिखें",dropPlaceholder:"ड्रॉप लोकेशन यहाँ लिखें",
-peoplePlaceholder:"जैसे 2 यात्री",detailsPlaceholder:"कोई अन्य जानकारी (वैकल्पिक)",
-waIntro:"नमस्ते GADI APP! मुझे सवारी बुक करनी है।",waName:"नाम",waPhone:"मोबाइल",
-waPickup:"पिकअप लोकेशन",waDrop:"ड्रॉप लोकेशन",waDate:"यात्रा की तारीख",
-waTime:"पिकअप का समय",waVehicle:"गाड़ी",waPeople:"यात्री / सामान की जानकारी",
-waDetails:"अन्य जानकारी",waEnd:"कृपया ड्राइवर की उपलब्धता और किराया बताएं।",
-notSpecified:"नहीं बताया",none:"कोई नहीं"
-},
-hinglish:{
-bookRide:"Ride Book Karein",bookRideArrow:"Ride Book Karein →",tagline:"SAFE • FAST • AFFORDABLE",
-heroLine1:"Aapka Shehar,",heroLine2:"Aapki Ride.",
-heroText:"Aapke ghar tak easy aur affordable ride. Pickup aur drop location khud type karein, vehicle choose karein aur WhatsApp par booking request bhejein.",
-bookingTitle:"Apni Ride Book Karein",
-bookingIntro:"Neeche trip details bharein. Driver availability aur fare confirm karne ke liye hamari team WhatsApp par contact karegi.",
-nameLabel:"Aapka Naam *",phoneLabel:"Mobile Number *",pickupLabel:"📍 Pickup Location *",dropLabel:"📍 Drop Location *",
-dateLabel:"Travel Date *",timeLabel:"Pickup Time",vehicleLabel:"Vehicle Choose Karein *",chooseVehicle:"Vehicle choose karein",
-bike:"Bike",car:"Car",threeWheeler:"3-Wheeler",loadingPickup:"Loading Pickup",
-peopleLabel:"Passengers / Load Details",detailsLabel:"Extra Details",
-submitButton:"WhatsApp Par Booking Request Bhejein",
-bookingNote:"Ye sirf booking enquiry hai. Driver availability aur fare check karne ke baad hamari team ride confirm karegi.",
-footer:"© 2026 GADI APP. Safe • Fast • Affordable rides.",
-namePlaceholder:"Apna naam likhein",phonePlaceholder:"Mobile number likhein",
-pickupPlaceholder:"Pickup location yahan type karein",dropPlaceholder:"Drop location yahan type karein",
-peoplePlaceholder:"Jaise 2 passengers",detailsPlaceholder:"Koi extra information (optional)",
-waIntro:"Hello GADI APP! Mujhe ride book karni hai.",waName:"Naam",waPhone:"Mobile",
-waPickup:"Pickup Location",waDrop:"Drop Location",waDate:"Travel Date",waTime:"Pickup Time",
-waVehicle:"Vehicle",waPeople:"Passengers / Load Details",waDetails:"Extra Details",
-waEnd:"Please driver availability aur fare confirm karein.",notSpecified:"Nahi bataya",none:"Kuch nahi"
-}
+const translations = {
+ en:{
+  bookRide:"Book a Ride",bookRideArrow:"Book a Ride →",tagline:"SAFE • FAST • AFFORDABLE",
+  heroLine1:"Your City,",heroLine2:"Your Ride.",heroText:"Quick, affordable rides at your doorstep. Enter your pickup and drop locations, choose your vehicle, and send your booking request on WhatsApp.",
+  bookingTitle:"Book Your Ride",bookingIntro:"Enter your trip details below. Our team will contact you on WhatsApp to confirm driver availability and fare.",
+  nameLabel:"Your Name *",phoneLabel:"Mobile Number *",pickupLabel:"📍 Pickup Location *",dropLabel:"📍 Drop Location *",dateLabel:"Travel Date *",timeLabel:"Pickup Time",vehicleLabel:"Select Vehicle *",chooseVehicle:"Choose vehicle",bike:"Bike",car:"Car",threeWheeler:"3-Wheeler",loadingPickup:"Loading Pickup",peopleLabel:"Passengers / Load Details",detailsLabel:"Additional Details",submitButton:"Send Booking Request on WhatsApp",bookingNote:"This is a booking enquiry only. Your ride will be confirmed after our team checks driver availability and fare with you.",footer:"© 2026 GADI APP. Safe • Fast • Affordable rides.",
+  namePlaceholder:"Enter your name",phonePlaceholder:"Enter mobile number",pickupPlaceholder:"Enter pickup location manually",dropPlaceholder:"Enter drop location manually",peoplePlaceholder:"e.g. 2 passengers",detailsPlaceholder:"Any extra information (optional)",
+  waIntro:"Hello GADI APP! I want to book a ride.",waName:"Name",waPhone:"Mobile",waPickup:"Pickup Location",waDrop:"Drop Location",waDate:"Travel Date",waTime:"Pickup Time",waVehicle:"Vehicle",waPeople:"Passengers / Load Details",waDetails:"Additional Details",waEnd:"Please confirm driver availability and fare.",notSpecified:"Not specified",none:"None"
+ },
+ hi:{
+  bookRide:"सवारी बुक करें",bookRideArrow:"सवारी बुक करें →",tagline:"सुरक्षित • तेज़ • किफायती",
+  heroLine1:"आपका शहर,",heroLine2:"आपकी सवारी।",heroText:"आपके दरवाज़े पर आसान और किफायती सवारी। पिकअप और ड्रॉप लोकेशन लिखें, गाड़ी चुनें और WhatsApp पर बुकिंग अनुरोध भेजें।",
+  bookingTitle:"अपनी सवारी बुक करें",bookingIntro:"नीचे अपनी यात्रा की जानकारी भरें। ड्राइवर की उपलब्धता और किराया बताने के लिए हमारी टीम WhatsApp पर संपर्क करेगी।",
+  nameLabel:"आपका नाम *",phoneLabel:"मोबाइल नंबर *",pickupLabel:"📍 पिकअप लोकेशन *",dropLabel:"📍 ड्रॉप लोकेशन *",dateLabel:"यात्रा की तारीख *",timeLabel:"पिकअप का समय",vehicleLabel:"गाड़ी चुनें *",chooseVehicle:"गाड़ी चुनें",bike:"बाइक",car:"कार",threeWheeler:"3-व्हीलर",loadingPickup:"लोडिंग पिकअप",peopleLabel:"सवारी / सामान की जानकारी",detailsLabel:"अन्य जानकारी",submitButton:"WhatsApp पर बुकिंग अनुरोध भेजें",bookingNote:"यह केवल बुकिंग पूछताछ है। ड्राइवर की उपलब्धता और किराया जाँचने के बाद हमारी टीम आपकी सवारी कन्फर्म करेगी।",footer:"© 2026 GADI APP. सुरक्षित • तेज़ • किफायती सवारी।",
+  namePlaceholder:"अपना नाम लिखें",phonePlaceholder:"मोबाइल नंबर लिखें",pickupPlaceholder:"पिकअप लोकेशन यहाँ लिखें",dropPlaceholder:"ड्रॉप लोकेशन यहाँ लिखें",peoplePlaceholder:"जैसे 2 यात्री",detailsPlaceholder:"कोई अन्य जानकारी (वैकल्पिक)",
+  waIntro:"नमस्ते GADI APP! मुझे सवारी बुक करनी है।",waName:"नाम",waPhone:"मोबाइल",waPickup:"पिकअप लोकेशन",waDrop:"ड्रॉप लोकेशन",waDate:"यात्रा की तारीख",waTime:"पिकअप का समय",waVehicle:"गाड़ी",waPeople:"यात्री / सामान की जानकारी",waDetails:"अन्य जानकारी",waEnd:"कृपया ड्राइवर की उपलब्धता और किराया बताएं।",notSpecified:"नहीं बताया",none:"कोई नहीं"
+ },
+ hinglish:{
+  bookRide:"Ride Book Karein",bookRideArrow:"Ride Book Karein →",tagline:"SAFE • FAST • AFFORDABLE",
+  heroLine1:"Aapka Shehar,",heroLine2:"Aapki Ride.",heroText:"Aapke ghar tak easy aur affordable ride. Pickup aur drop location khud type karein, vehicle choose karein aur WhatsApp par booking request bhejein.",
+  bookingTitle:"Apni Ride Book Karein",bookingIntro:"Neeche trip details bharein. Driver availability aur fare confirm karne ke liye hamari team WhatsApp par contact karegi.",
+  nameLabel:"Aapka Naam *",phoneLabel:"Mobile Number *",pickupLabel:"📍 Pickup Location *",dropLabel:"📍 Drop Location *",dateLabel:"Travel Date *",timeLabel:"Pickup Time",vehicleLabel:"Vehicle Choose Karein *",chooseVehicle:"Vehicle choose karein",bike:"Bike",car:"Car",threeWheeler:"3-Wheeler",loadingPickup:"Loading Pickup",peopleLabel:"Passengers / Load Details",detailsLabel:"Extra Details",submitButton:"WhatsApp Par Booking Request Bhejein",bookingNote:"Ye sirf booking enquiry hai. Driver availability aur fare check karne ke baad hamari team ride confirm karegi.",footer:"© 2026 GADI APP. Safe • Fast • Affordable rides.",
+  namePlaceholder:"Apna naam likhein",phonePlaceholder:"Mobile number likhein",pickupPlaceholder:"Pickup location yahan type karein",dropPlaceholder:"Drop location yahan type karein",peoplePlaceholder:"Jaise 2 passengers",detailsPlaceholder:"Koi extra information (optional)",
+  waIntro:"Hello GADI APP! Mujhe ride book karni hai.",waName:"Naam",waPhone:"Mobile",waPickup:"Pickup Location",waDrop:"Drop Location",waDate:"Travel Date",waTime:"Pickup Time",waVehicle:"Vehicle",waPeople:"Passengers / Load Details",waDetails:"Extra Details",waEnd:"Please driver availability aur fare confirm karein.",notSpecified:"Nahi bataya",none:"Kuch nahi"
+ }
 };
-
 const languageSelect=document.getElementById("languageSelect");
-
 function setLanguage(lang){
-const t=translations[lang]||translations.en;
-document.documentElement.lang=lang==="hi"?"hi":"en";
-document.querySelectorAll("[data-i18n]").forEach(el=>{
-const key=el.dataset.i18n;
-if(t[key])el.textContent=t[key];
-});
-document.querySelectorAll("[data-placeholder]").forEach(el=>{
-const key=el.dataset.placeholder;
-if(t[key])el.placeholder=t[key];
-});
-localStorage.setItem("gadiLanguage",lang);
+ const t=translations[lang]||translations.en;
+ document.documentElement.lang=lang==="hi"?"hi":"en";
+ document.querySelectorAll("[data-i18n]").forEach(el=>{const key=el.dataset.i18n;if(t[key])el.textContent=t[key];});
+ document.querySelectorAll("[data-placeholder]").forEach(el=>{const key=el.dataset.placeholder;if(t[key])el.placeholder=t[key];});
+ localStorage.setItem("gadiLanguage",lang);
 }
-
 languageSelect.value=localStorage.getItem("gadiLanguage")||"en";
 setLanguage(languageSelect.value);
 languageSelect.addEventListener("change",()=>setLanguage(languageSelect.value));
 
 document.getElementById("bookingForm").addEventListener("submit",function(e){
-e.preventDefault();
-const val=id=>document.getElementById(id).value.trim();
-const t=translations[languageSelect.value]||translations.en;
-const vehicle=document.getElementById("vehicle").value;
-const msg=[
-t.waIntro,"",
-t.waName+": "+val("name"),
-t.waPhone+": "+val("phone"),
-t.waPickup+": "+val("pickup"),
-t.waDrop+": "+val("drop"),
-t.waDate+": "+val("date"),
-t.waTime+": "+(val("time")||t.notSpecified),
-t.waVehicle+": "+vehicle,
-t.waPeople+": "+(val("people")||t.notSpecified),
-t.waDetails+": "+(val("details")||t.none),
-"",t.waEnd
-].join("\n");
-const url="https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(msg);
-const win=window.open(url,"_blank");
-if(!win)window.location.href=url;
+ e.preventDefault();
+ const val=id=>document.getElementById(id).value.trim();
+ const t=translations[languageSelect.value]||translations.en;
+ const vehicleSelect=document.getElementById("vehicle");
+ const vehicle=vehicleSelect.options[vehicleSelect.selectedIndex].value;
+ const msg=[t.waIntro,"",t.waName+": "+val("name"),t.waPhone+": "+val("phone"),t.waPickup+": "+val("pickup"),t.waDrop+": "+val("drop"),t.waDate+": "+val("date"),t.waTime+": "+(val("time")||t.notSpecified),t.waVehicle+": "+vehicle,t.waPeople+": "+(val("people")||t.notSpecified),t.waDetails+": "+(val("details")||t.none),"",t.waEnd].join("
+");
+ const url="https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(msg);
+ const win=window.open(url,"_blank");if(!win)window.location.href=url;
 });
 
-if("serviceWorker" in navigator){
-window.addEventListener("load",()=>{
-navigator.serviceWorker.register("./service-worker.js").catch(err=>console.log("PWA setup:",err));
-});
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js").catch((error) => {
+      console.log("Service worker registration failed:", error);
+    });
+  });
 }
 </script>
-</body>
-</html>
+<!-- Staff-only login and dashboard. Public customers do not need an account. -->
+<div class="staff-overlay" id="staffOverlay" aria-modal="true" role="dialog" aria-label="Driver and Admin Login">
+ <div class="staff-box">
+  <button class="staff-close" id="closeStaffLogin" type="button">✕ Close</button>
+  <div id="staffLoginPanel" class="staff-card" style="max-width:440px;margin:35px auto">
+   <h2>🔐 Driver / Admin Login</h2>
+   <p class="staff-muted">Yeh login sirf GADI APP Admin aur registered drivers ke liye hai. Customers ko login ki zaroorat nahi.</p>
+   <div id="staffLoginMsg" class="staff-note staff-hidden"></div>
+   <form id="staffLoginForm">
+    <div class="field"><label for="staffEmail">Email Address</label><input id="staffEmail" type="email" required autocomplete="username" placeholder="Email"></div>
+    <div class="field"><label for="staffPassword">Password</label><input id="staffPassword" type="password" required autocomplete="current-password" placeholder="Password"></div>
+    <button class="staff-action" type="submit">Login</button>
+   </form>
+  </div>
+  <div id="staffDashboard" class="staff-hidden">
+   <div class="staff-card">
+    <button class="staff-close" id="staffLogout" type="button">Logout</button>
+    <h2 id="staffWelcome">Dashboard</h2><p class="staff-muted" id="staffRole"></p>
+   </div>
+   <div id="staffAdmin" class="staff-hidden">
+    <div class="staff-tabs" id="staffAdminTabs">
+     <button class="active" data-pane="staffAdminBookings">Bookings</button>
+     <button data-pane="staffAdminDrivers">Drivers</button>
+     <button data-pane="staffAdminQuotes">All Quotes</button>
+    </div>
+    <div id="staffAdminBookings" class="staff-pane">
+     <div class="staff-card">
+      <h3>➕ Create Booking</h3>
+      <form id="staffBookingForm">
+       <div class="staff-grid">
+        <div class="field"><label>Pickup Location *</label><input id="sPickup" required></div>
+        <div class="field"><label>Drop Location *</label><input id="sDrop" required></div>
+        <div class="field"><label>Journey Date</label><input id="sDate" type="date"></div>
+        <div class="field"><label>Pickup Time</label><input id="sTime" type="time"></div>
+        <div class="field"><label>Vehicle Type</label><select id="sVehicle"><option value="">Select</option><option>Bike</option><option>Car</option><option>3-Wheeler / Atul Tempo</option><option>Loading Pickup</option><option>Other</option></select></div>
+        <div class="field"><label>Trip Type</label><select id="sTrip"><option value="">Select</option><option>One Way</option><option>Round Trip</option><option>Local</option><option>Outstation</option></select></div>
+        <div class="field"><label>Passengers</label><input id="sPassengers" type="number" min="1"></div>
+        <div class="field"><label>Luggage</label><input id="sLuggage"></div>
+       </div>
+       <div class="field"><label>Notes (drivers can see)</label><textarea id="sNotes"></textarea></div>
+       <h3>🔒 Customer Details (Admin / selected driver only)</h3>
+       <div class="staff-grid">
+        <div class="field"><label>Customer Name *</label><input id="sCustomerName" required></div>
+        <div class="field"><label>Customer Phone *</label><input id="sCustomerPhone" required type="tel"></div>
+        <div class="field"><label>Customer Email</label><input id="sCustomerEmail" type="email"></div>
+        <div class="field"><label>Customer Address</label><input id="sCustomerAddress"></div>
+       </div>
+       <button class="staff-action" type="submit">Create Booking & Send to Drivers</button>
+      </form><div id="staffBookingMsg" class="staff-note staff-hidden"></div>
+     </div>
+     <div class="staff-card"><h3>All Bookings</h3><button class="staff-action" id="staffRefreshBookings">Refresh</button><div id="staffBookingList"></div></div>
+    </div>
+    <div id="staffAdminDrivers" class="staff-pane staff-hidden">
+     <div class="staff-card">
+      <h3>Add Driver Profile</h3>
+      <p class="staff-muted">Pehle Supabase Dashboard → Authentication → Users mein driver ka email/password user banayein. Phir uski User UID yahan enter karein. Password yahan kabhi na likhein.</p>
+      <form id="staffDriverForm"><div class="staff-grid">
+       <div class="field"><label>Auth User ID (UUID) *</label><input id="sDriverUid" required></div>
+       <div class="field"><label>Driver Name *</label><input id="sDriverName" required></div>
+       <div class="field"><label>Phone</label><input id="sDriverPhone" type="tel"></div>
+       <div class="field"><label>Vehicle Type</label><input id="sDriverVehicle"></div>
+       <div class="field"><label>Vehicle Model</label><input id="sDriverModel"></div>
+       <div class="field"><label>City</label><input id="sDriverCity"></div>
+      </div><button class="staff-action" type="submit">Add Driver</button></form><div id="staffDriverMsg" class="staff-note staff-hidden"></div>
+     </div>
+     <div class="staff-card"><div id="staffDriverList"></div></div>
+    </div>
+    <div id="staffAdminQuotes" class="staff-pane staff-hidden">
+     <div class="staff-card"><h3>All Driver Quotes</h3><button class="staff-action" id="staffRefreshQuotes">Refresh</button><div id="staffQuoteList"></div></div>
+    </div>
+   </div>
+   <div id="staffDriver" class="staff-hidden">
+    <div class="staff-tabs" id="staffDriverTabs"><button class="active" data-pane="staffDriverBookings">Bookings</button><button data-pane="staffDriverProfile">My Profile</button></div>
+    <div id="staffDriverBookings" class="staff-pane">
+     <div class="staff-card"><h3>Available / Assigned Bookings</h3><button class="staff-action" id="staffRefreshDriverBookings">Refresh</button><p class="staff-muted">Open booking mein customer details hidden rahengi. Admin assign karega tab selected driver ko details dikhegi.</p><div id="staffDriverBookingList"></div></div>
+    </div>
+    <div id="staffDriverProfile" class="staff-pane staff-hidden">
+     <div class="staff-card"><h3>My Profile</h3><form id="staffProfileForm"><div class="staff-grid">
+      <div class="field"><label>Name</label><input id="sProfileName" required></div>
+      <div class="field"><label>Phone</label><input id="sProfilePhone"></div>
+      <div class="field"><label>Vehicle Type</label><input id="sProfileVehicle"></div>
+      <div class="field"><label>Vehicle Model</label><input id="sProfileModel"></div>
+      <div class="field"><label>City</label><input id="sProfileCity"></div>
+     </div><button class="staff-action" type="submit">Update Profile</button></form><div id="staffProfileMsg" class="staff-note staff-hidden"></div></div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<!-- Supabase is used only by staff login/dashboard; public customer booking remains WhatsApp-only. -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function(){
+ const SUPABASE_URL="https://ypduvoihukgyztvrceko.supabase.co";
+ const SUPABASE_PUBLISHABLE_KEY="sb_publishable_xmN1tviHmeTTeeNamOQjMA_pTXJNExt";
+ const client=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
+ const el=id=>document.getElementById(id);
+ let user=null, driverProfile=null;
+ const safe=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+ const note=(id,msg,kind="")=>{const n=el(id);n.textContent=msg;n.className="staff-note "+kind;};
+ const show=(id,on=true)=>el(id).classList.toggle("staff-hidden",!on);
+ const rupee=v=>"₹"+Number(v).toLocaleString("en-IN");
+ el("openStaffLogin").addEventListener("click",()=>{el("staffOverlay").classList.add("open");show("staffLoginPanel",true);show("staffDashboard",false);});
+ el("closeStaffLogin").addEventListener("click",()=>el("staffOverlay").classList.remove("open"));
+ el("staffOverlay").addEventListener("click",e=>{if(e.target===el("staffOverlay"))el("staffOverlay").classList.remove("open");});
+ function tabs(id,pane){document.querySelectorAll("#"+id+" button").forEach(b=>b.classList.toggle("active",b.dataset.pane===pane));const selector=id==="staffAdminTabs"?"#staffAdmin .staff-pane":"#staffDriver .staff-pane";document.querySelectorAll(selector).forEach(p=>p.classList.toggle("staff-hidden",p.id!==pane));}
+ el("staffAdminTabs").addEventListener("click",e=>{if(!e.target.dataset.pane)return;tabs("staffAdminTabs",e.target.dataset.pane);if(e.target.dataset.pane==="staffAdminDrivers")loadDrivers();if(e.target.dataset.pane==="staffAdminQuotes")loadQuotes();});
+ el("staffDriverTabs").addEventListener("click",e=>{if(!e.target.dataset.pane)return;tabs("staffDriverTabs",e.target.dataset.pane);if(e.target.dataset.pane==="staffDriverProfile")loadProfile();});
+ el("staffLoginForm").addEventListener("submit",async e=>{
+  e.preventDefault();note("staffLoginMsg","Logging in…");
+  const {data,error}=await client.auth.signInWithPassword({email:el("staffEmail").value.trim(),password:el("staffPassword").value});
+  if(error){note("staffLoginMsg",error.message,"staff-error");return;}await openDashboard(data.user);
+ });
+ async function openDashboard(authUser){
+  user=authUser;
+  const {data:admin,error:ae}=await client.from("admin_users").select("auth_user_id").eq("auth_user_id",user.id).maybeSingle();
+  if(ae){note("staffLoginMsg","Admin check failed: "+ae.message,"staff-error");await client.auth.signOut();return;}
+  show("staffLoginPanel",false);show("staffDashboard",true);
+  if(admin){el("staffWelcome").textContent="GADI APP Admin Dashboard";el("staffRole").textContent=user.email+" • Admin";show("staffAdmin",true);show("staffDriver",false);tabs("staffAdminTabs","staffAdminBookings");await loadBookings();return;}
+  const {data:d,error}=await client.from("DRIVERS").select("*").eq("auth_user_id",user.id).maybeSingle();
+  if(error||!d){show("staffDashboard",false);show("staffLoginPanel",true);note("staffLoginMsg",error?error.message:"Driver profile Admin ne abhi create nahi kiya hai.","staff-error");await client.auth.signOut();return;}
+  driverProfile=d;el("staffWelcome").textContent="Namaste, "+(d.driver_name||"Driver");el("staffRole").textContent=user.email+" • Driver";show("staffAdmin",false);show("staffDriver",true);tabs("staffDriverTabs","staffDriverBookings");await loadDriverBookings();await loadProfile();
+ }
+ el("staffLogout").onclick=async()=>{await client.auth.signOut();user=null;driverProfile=null;show("staffDashboard",false);show("staffLoginPanel",true);el("staffPassword").value="";note("staffLoginMsg","You have logged out.");};
+ client.auth.getSession().then(({data})=>{if(data.session){el("staffOverlay").classList.add("open");openDashboard(data.session.user);}});
+ async function loadBookings(){
+  const box=el("staffBookingList");box.textContent="Loading…";
+  const {data,error}=await client.from("bookings").select("*").order("created_at",{ascending:false});
+  if(error){box.textContent=error.message;return;}if(!data.length){box.textContent="Abhi koi booking nahi hai.";return;}
+  const {data:drivers}=await client.from("DRIVERS").select("auth_user_id,driver_name");
+  box.innerHTML=data.map(b=>`<div class="staff-item"><b>${safe(b.pickup_location)} → ${safe(b.drop_location)}</b> <span class="staff-muted">(${safe(b.status)})</span>
+   <p class="staff-muted">Date: ${safe(b.journey_date||"—")} | Time: ${safe(b.pickup_time||"—")} | Vehicle: ${safe(b.vehicle_type||"—")} | Passengers: ${safe(b.passenger_count||"—")}</p>
+   <div class="staff-grid"><div class="field"><label>Status</label><select id="st-${b.id}">${["open","assigned","completed","cancelled"].map(s=>`<option ${b.status===s?"selected":""}>${s}</option>`).join("")}</select></div>
+   <div class="field"><label>Assign Driver</label><select id="as-${b.id}"><option value="">— Select —</option>${(drivers||[]).map(d=>`<option value="${safe(d.auth_user_id)}" ${b.selected_driver_auth_id===d.auth_user_id?"selected":""}>${safe(d.driver_name||"Driver")}</option>`).join("")}</select></div></div>
+   <button class="staff-action" onclick="window.gadiSaveBooking('${b.id}')">Save Status / Driver</button>
+   <button class="staff-action" onclick="window.gadiQuotesFor('${b.id}')">View Quotes</button><div id="q-${b.id}"></div></div>`).join("");
+ }
+ window.gadiSaveBooking=async id=>{
+  const driver=el("as-"+id).value||null,status=el("st-"+id).value;
+  if(driver&&status!=="assigned"){alert("Driver assign karne ke liye status 'assigned' select karein.");return;}
+  const {error}=await client.from("bookings").update({selected_driver_auth_id:driver,status}).eq("id",id);
+  if(error){alert(error.message);return;}alert("Booking updated.");loadBookings();
+ };
+ window.gadiQuotesFor=async id=>{
+  const box=el("q-"+id);box.textContent="Loading…";
+  const {data,error}=await client.from("driver_quotes").select("*").eq("booking_id",id).order("quoted_price");
+  if(error){box.textContent=error.message;return;}
+  const {data:ds}=await client.from("DRIVERS").select("auth_user_id,driver_name");const names=Object.fromEntries((ds||[]).map(d=>[d.auth_user_id,d.driver_name]));
+  box.innerHTML=data.length?data.map(q=>`<div class="staff-quote"><b>${safe(names[q.driver_auth_id]||"Driver")}</b> — ${rupee(q.quoted_price)}<p>${safe(q.message||"")}</p></div>`).join(""):"No quotes received yet.";
+ };
+ el("staffBookingForm").onsubmit=async e=>{
+  e.preventDefault();note("staffBookingMsg","Creating booking…");
+  const b={pickup_location:el("sPickup").value.trim(),drop_location:el("sDrop").value.trim(),journey_date:el("sDate").value||null,pickup_time:el("sTime").value||null,vehicle_type:el("sVehicle").value||null,trip_type:el("sTrip").value||null,passenger_count:el("sPassengers").value?Number(el("sPassengers").value):null,luggage:el("sLuggage").value.trim()||null,notes:el("sNotes").value.trim()||null,status:"open"};
+  const {data,error}=await client.from("bookings").insert(b).select().single();
+  if(error){note("staffBookingMsg",error.message,"staff-error");return;}
+  const c={booking_id:data.id,customer_name:el("sCustomerName").value.trim(),customer_phone:el("sCustomerPhone").value.trim(),customer_email:el("sCustomerEmail").value.trim()||null,customer_address:el("sCustomerAddress").value.trim()||null};
+  const result=await client.from("customer_details").insert(c);
+  if(result.error){note("staffBookingMsg","Booking saved but customer details failed: "+result.error.message,"staff-error");}
+  else{note("staffBookingMsg","Booking created. It will appear for all registered drivers.","staff-good");el("staffBookingForm").reset();}
+  await loadBookings();
+ };
+ el("staffRefreshBookings").onclick=loadBookings;
+ async function loadDrivers(){
+  const box=el("staffDriverList");box.textContent="Loading…";const {data,error}=await client.from("DRIVERS").select("*").order("created_at",{ascending:false});
+  if(error){box.textContent=error.message;return;}box.innerHTML="<h3>Drivers ("+data.length+")</h3>"+(data.length?data.map(d=>`<div class="staff-item"><b>${safe(d.driver_name)}</b><p>${safe(d.phone||"")} • ${safe(d.vehicle_type||"")} ${safe(d.vehicle_model||"")} • ${safe(d.city||"")}</p><small>${safe(d.auth_user_id)}</small></div>`).join(""):"No drivers added yet.");
+ }
+ el("staffDriverForm").onsubmit=async e=>{
+  e.preventDefault();const row={auth_user_id:el("sDriverUid").value.trim(),driver_name:el("sDriverName").value.trim(),phone:el("sDriverPhone").value.trim()||null,vehicle_type:el("sDriverVehicle").value.trim()||null,vehicle_model:el("sDriverModel").value.trim()||null,city:el("sDriverCity").value.trim()||null};
+  const {error}=await client.from("DRIVERS").insert(row);if(error){note("staffDriverMsg",error.message,"staff-error");return;}note("staffDriverMsg","Driver profile added.","staff-good");el("staffDriverForm").reset();loadDrivers();
+ };
+ async function loadQuotes(){
+  const box=el("staffQuoteList");box.textContent="Loading…";const {data,error}=await client.from("driver_quotes").select("*").order("created_at",{ascending:false});
+  if(error){box.textContent=error.message;return;}const {data:ds}=await client.from("DRIVERS").select("auth_user_id,driver_name");const names=Object.fromEntries((ds||[]).map(d=>[d.auth_user_id,d.driver_name]));
+  box.innerHTML=data.length?data.map(q=>`<div class="staff-item"><b>${safe(names[q.driver_auth_id]||"Driver")}</b> • ${rupee(q.quoted_price)}<p>Booking: ${safe(q.booking_id)}</p><p>${safe(q.message||"")}</p></div>`).join(""):"No quotes received.";
+ }
+ el("staffRefreshQuotes").onclick=loadQuotes;
+ async function loadDriverBookings(){
+  const box=el("staffDriverBookingList");box.textContent="Loading…";const {data:bs,error}=await client.from("bookings").select("*").order("created_at",{ascending:false});
+  if(error){box.textContent=error.message;return;}if(!bs.length){box.textContent="No bookings available.";return;}
+  const {data:qs}=await client.from("driver_quotes").select("*").eq("driver_auth_id",user.id);const qmap=Object.fromEntries((qs||[]).map(q=>[q.booking_id,q]));
+  let customer={};for(const b of bs){if(b.selected_driver_auth_id===user.id&&b.status==="assigned"){const {data}=await client.from("customer_details").select("*").eq("booking_id",b.id).maybeSingle();if(data)customer[b.id]=data;}}
+  box.innerHTML=bs.map(b=>{const q=qmap[b.id],c=customer[b.id],assigned=b.selected_driver_auth_id===user.id&&b.status==="assigned";
+   return `<div class="staff-item"><b>${safe(b.pickup_location)} → ${safe(b.drop_location)}</b> <span class="staff-muted">${safe(b.status)}</span>
+   <p class="staff-muted">Date: ${safe(b.journey_date||"—")} | Time: ${safe(b.pickup_time||"—")} | Vehicle: ${safe(b.vehicle_type||"—")} | Passengers: ${safe(b.passenger_count||"—")} | Luggage: ${safe(b.luggage||"—")}</p><p>${safe(b.notes||"")}</p>
+   ${assigned&&c?`<div class="staff-note staff-good"><b>Assigned to you — Customer Details</b><p>Name: ${safe(c.customer_name)}</p><p>Phone: ${safe(c.customer_phone)}</p><p>Email: ${safe(c.customer_email||"—")}</p><p>Address: ${safe(c.customer_address||"—")}</p></div>`:""}
+   ${b.status==="open"?`<div class="field"><label>Your rate (₹)</label><input id="price-${b.id}" type="number" min="1" step="0.01" value="${q?safe(q.quoted_price):""}"></div><div class="field"><label>Message</label><textarea id="msg-${b.id}">${safe(q?.message||"")}</textarea></div><button class="staff-action" onclick="window.gadiSubmitQuote('${b.id}')">${q?"Update Quote":"Send Quote"}</button>`:""}
+   ${q?`<div class="staff-quote">Your quote: <b>${rupee(q.quoted_price)}</b></div>`:""}</div>`;
+  }).join("");
+ }
+ window.gadiSubmitQuote=async id=>{
+  const price=Number(el("price-"+id).value),messageText=el("msg-"+id).value.trim();if(!price||price<=0){alert("Valid rate enter karein.");return;}
+  const {data:old}=await client.from("driver_quotes").select("id").eq("booking_id",id).eq("driver_auth_id",user.id).maybeSingle();
+  const result=old?await client.from("driver_quotes").update({quoted_price:price,message:messageText}).eq("id",old.id):await client.from("driver_quotes").insert({booking_id:id,driver_auth_id:user.id,quoted_price:price,message:messageText});
+  if(result.error){alert(result.error.message);return;}alert("Quote saved.");loadDriverBookings();
+ };
+ el("staffRefreshDriverBookings").onclick=loadDriverBookings;
+ async function loadProfile(){
+  const {data,error}=await client.from("DRIVERS").select("*").eq("auth_user_id",user.id).single();if(error){note("staffProfileMsg",error.message,"staff-error");return;}driverProfile=data;
+  el("sProfileName").value=data.driver_name||"";el("sProfilePhone").value=data.phone||"";el("sProfileVehicle").value=data.vehicle_type||"";el("sProfileModel").value=data.vehicle_model||"";el("sProfileCity").value=data.city||"";
+ }
+ el("staffProfileForm").onsubmit=async e=>{
+  e.preventDefault();const {error}=await client.from("DRIVERS").update({driver_name:el("sProfileName").value.trim(),phone:el("sProfilePhone").value.trim()||null,vehicle_type:el("sProfileVehicle").value.trim()||null,vehicle_model:el("sProfileModel").value.trim()||null,city:el("sProfileCity").value.trim()||null}).eq("auth_user_id",user.id);
+  if(error){note("staffProfileMsg",error.message,"staff-error");return;}note("staffProfileMsg","Profile updated successfully.","staff-good");
+ };
+})();
+</script>
+
+</body></html>
