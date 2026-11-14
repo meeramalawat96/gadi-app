@@ -286,7 +286,7 @@ if ("serviceWorker" in navigator) {
 (function(){
  const SUPABASE_URL="https://ypduvoihukgyztvrceko.supabase.co";
  const SUPABASE_PUBLISHABLE_KEY="sb_publishable_xmN1tviHmeTTeeNamOQjMA_pTXJNExt";
- const client=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);\n window.gadiSupabase=client;
+ const client=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY); window.gadiSupabase=client;
  const el=id=>document.getElementById(id);
  let user=null, driverProfile=null;
  const safe=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
